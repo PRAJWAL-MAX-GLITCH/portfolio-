@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajwal Patil | AI-Native Developer & Twin</title>
+    <meta name="description" content="Explore the portfolio of Prajwal Patil, an AI-Native Developer specializing in Generative AI, RAG Systems, and FastAPI backend engineering. Interact with his AI Twin.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="obsidian-theme">
+    <div class="glow-bg"></div>
+
+    <!-- Main Workspace Container -->
+    <main class="console-workspace" id="main-console">
+        <!-- Sidebar Navigation (Console Tabs) -->
+        <aside class="console-sidebar">
+            <div class="sidebar-header">
+                <span class="status-dot online"></span>
+                <span class="user-tag">prajwal.patil_</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#hero" class="nav-item active" id="nav-hero">
+                    <span class="nav-icon">🤖</span>
+                    <span class="nav-text">Workspace</span>
+                </a>
+                <a href="#twin" class="nav-item" id="nav-twin">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">AI Twin</span>
+                </a>
+                <a href="#projects" class="nav-item" id="nav-projects">
+                    <span class="nav-icon">📦</span>
+                    <span class="nav-text">Projects</span>
+                </a>
+                <a href="#skills" class="nav-item" id="nav-skills">
+                    <span class="nav-icon">⚡</span>
+                    <span class="nav-text">Skills</span>
+                </a>
+                <a href="#telemetry" class="nav-item" id="nav-telemetry">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Telemetry</span>
+                </a>
+                <a href="#contact" class="nav-item" id="nav-contact">
+                    <span class="nav-icon">📞</span>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <span class="version-lbl">v2.6.0-stable</span>
+            </div>
+        </aside>
+
+        <!-- Main Console Body -->
+        <section class="console-body">
+            <!-- Header bar -->
+            <header class="console-header">
+                <div class="window-controls">
+                    <span class="btn close"></span>
+                    <span class="btn minimize"></span>
+                    <span class="btn maximize"></span>
+                </div>
+                <div class="current-path">
+                    <span class="path-root">prajwal@desktop</span>
+                    <span class="path-separator">:</span>
+                    <span class="path-current">~/portfolio</span>
+                </div>
+                <div class="connection-status">
+                    <span class="status-lbl">API Node: Connected</span>
+                </div>
+            </header>
+
+            <!-- Scrollable content area -->
+            <div class="console-content">
+                
+                <!-- SECTION 1: HERO/LANDING -->
+                <article id="hero" class="section-card active-section">
+                    <div class="hero-wrapper">
+                        <div class="badge">AI-NATIVE SYSTEM</div>
+                        <h1 class="hero-title">Prajwal Patil</h1>
+                        <p class="hero-subtitle-tagline">
+                            <strong>AI-Native Developer</strong> | Generative AI, RAG Systems & FastAPI Specialist
+                        </p>
+                        <blockquote class="hero-quote">
+                            "Building architectures that reason, retrieve, and scale. No fluff—just production-ready AI."
+                        </blockquote>
+                        <p class="hero-about-summary">
+                            I design, optimize, and deploy high-performance applications from the backend out. My work bridges the gap between deep learning models and scalable web APIs, combining <strong>FastAPI</strong> speed with vector retrieval databases like <strong>FAISS</strong> to build robust, semantic search and generation pipelines. Deployed via async FastAPI backend layers, my projects—such as <strong>MediSense AI</strong>—are built to deliver low-latency responses, backed by a proven algorithmic foundation of <strong>300+ LeetCode problems</strong> solved.
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="#twin" class="btn-primary" onclick="activateSection('twin')">Launch AI Twin</a>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="btn-secondary">GitHub</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SECTION 2: AI TWIN -->
+                <article id="twin" class="section-card">
+                    <div class="section-header">
+                        <h2>🧠 AI Twin Console</h2>
+                        <p>Interact with Prajwal's AI Twin. Trained directly on his resume, tech stack, and design architectures.</p>
+                    </div>
+                    <div class="twin-workspace">
+                        <div class="chat-display" id="chat-messages">
+                            <div class="message system">
+                                <p>[SYSTEM LOG] AI Twin initiated. RAG knowledge initialized via memory embedding engine.</p>
+                            </div>
+                            <div class="message assistant">
+                                <p>Hey there! I'm Prajwal's AI Twin, running on a semantic memory engine containing his project schemas, engineering decisions, and core skills. Think of me as his technical proxy. What are you looking to build or evaluate today?</p>
+                            </div>
+                        </div>
+                        <div class="suggestion-chips" id="quick-queries">
+                            <button class="chip" onclick="askTwin('Tell me about your RAG project')">Tell me about MediSense AI</button>
+                            <button class="chip" onclick="askTwin('What backend frameworks do you use?')">What backend frameworks do you use?</button>
+                            <button class="chip" onclick="askTwin('Show your LeetCode accomplishments')">Show your LeetCode accomplishments</button>
+                            <button class="chip" onclick="askTwin('Why FastAPI over Django/Flask?')">Why FastAPI over Django/Flask?</button>
+                        </div>
+                        <form class="chat-input-area" id="chat-form" onsubmit="handleChatSubmit(event)">
+                            <input type="text" id="chat-input" placeholder="Query AI Twin..." autocomplete="off" required>
+                            <button type="submit" class="btn-submit">Query</button>
+                        </form>
+                    </div>
+                </article>
+
+                <!-- SECTION 3: PROJECTS -->
+                <article id="projects" class="section-card">
+                    <div class="section-header">
+                        <h2>📦 Systems & Projects</h2>
+                        <p>Production-ready services and systems built with pythonic backend optimization and deep learning integrations.</p>
+                    </div>
+                    <div class="projects-grid">
+                        <!-- Project 1 -->
+                        <div class="project-item">
+                            <div class="project-header">
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">LangChain</span>
+                                    <span class="tag">FAISS</span>
+                                    <span class="tag">FastAPI</span>
+                                </div>
+                                <span class="project-status">Operational</span>
+                            </div>
+                            <h3>MediSense AI</h3>
+                            <p class="project-desc">
+                                Retrieval-Augmented Generation (RAG) assistant for intelligent medical document search and contextual query parsing.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric"><span class="val">Vector DB</span><span class="lbl">FAISS</span></div>
+                                <div class="metric"><span class="val">Embedding</span><span class="lbl">HuggingFace</span></div>
+                            </div>
+                            <button class="btn-code" onclick="toggleArchitecture('medisense-arch')">View Architecture Flow</button>
+                            
+                            <div id="medisense-arch" class="project-arch-visual hidden">
+                                <h4>System Data Flow</h4>
+                                <div class="flowchart">
+                                    <div class="node">Input Document</div>
+                                    <div class="arrow">↓</div>
+                                    <div class="node">LangChain Chunking</div>
+                                    <div class="arrow">↓</div>
+                                    <div class="node">FAISS Embeddings Index</div>
+                                    <div class="arrow">↓</div>
+                                    <div class="node">Context-Aware LLM Synthesis</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-item">
+                            <div class="project-header">
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">FastAPI</span>
+                                    <span class="tag">PyTorch</span>
+                                    <span class="tag">MongoDB</span>
+                                </div>
+                                <span class="project-status">Deployed</span>
+                            </div>
+                            <h3>AI Smart Learning Platform</h3>
+                            <p class="project-desc">
+                                AI-powered learning pipeline providing personalized quizzes, student recommendations, and analytical tracking models.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric"><span class="val">Database</span><span class="lbl">MongoDB</span></div>
+                                <div class="metric"><span class="val">Deployment</span><span class="lbl">Vercel</span></div>
+                            </div>
+                            <button class="btn-code" onclick="toggleArchitecture('learning-arch')">View Recommendation Flow</button>
+                            
+                            <div id="learning-arch" class="project-arch-visual hidden">
+                                <h4>Recommendation Logic</h4>
+                                <div class="flowchart">
+                                    <div class="node">Student Data Log</div>
+                                    <div class="arrow">↓</div>
+                                    <div class="node">PyTorch Analytics Model</div>
+                                    <div class="arrow">↓</div>
+                                    <div class="node">FastAPI Router</div>
+                                    <div class="arrow">↓</div>
+                                    <div class="node">Vercel Deployment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SECTION 4: SKILLS -->
+                <article id="skills" class="section-card">
+                    <div class="section-header">
+                        <h2>⚡ Technical Skill Matrix</h2>
+                        <p>Core specialities organized by execution layer, focusing on performance engineering over design details.</p>
+                    </div>
+                    <div class="skills-container">
+                        <div class="skills-block">
+                            <h3>AI & Generative AI</h3>
+                            <ul class="skills-list">
+                                <li>LangChain</li>
+                                <li>FAISS</li>
+                                <li>RAG Pipeline Architecture</li>
+                                <li>Prompt Optimization</li>
+                                <li>Vector Space Search</li>
+                            </ul>
+                        </div>
+                        <div class="skills-block">
+                            <h3>Machine Learning</h3>
+                            <ul class="skills-list">
+                                <li>PyTorch</li>
+                                <li>TensorFlow</li>
+                                <li>Scikit-Learn</li>
+                                <li>Deep Neural Networks</li>
+                            </ul>
+                        </div>
+                        <div class="skills-block">
+                            <h3>Backend Engineering</h3>
+                            <ul class="skills-list">
+                                <li>FastAPI</li>
+                                <li>REST API Design</li>
+                                <li>MongoDB / SQL</li>
+                                <li>Asynchronous Execution</li>
+                            </ul>
+                        </div>
+                        <div class="skills-block">
+                            <h3>Deployment & CS Core</h3>
+                            <ul class="skills-list">
+                                <li>Docker</li>
+                                <li>AWS & Cloud Config</li>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Object-Oriented Programming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SECTION 5: TELEMETRY -->
+                <article id="telemetry" class="section-card">
+                    <div class="section-header">
+                        <h2>📊 Engineering Telemetry</h2>
+                        <p>Live trackers displaying code volume, task execution, and analytical solving stats.</p>
+                    </div>
+                    <div class="telemetry-grid">
+                        <div class="telemetry-item">
+                            <h3>Algorithmic Problem Solving</h3>
+                            <div class="metrics-block">
+                                <div class="metric-big">300+</div>
+                                <div class="metric-sub">LeetCode Solved Problems</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="bar-lbl">LeetCode Verification</div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="telemetry-item">
+                            <h3>Pipeline Performance</h3>
+                            <div class="metrics-block">
+                                <div class="metric-big">&lt;150ms</div>
+                                <div class="metric-sub">Average FastAPI Endpoint Latency</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="bar-lbl">Throughput Performance</div>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SECTION 6: CONTACT -->
+                <article id="contact" class="section-card">
+                    <div class="section-header">
+                        <h2>📞 Command Center</h2>
+                        <p>Initialize communication hooks or retrieve raw documents.</p>
+                    </div>
+                    <div class="contact-workspace">
+                        <div class="contact-card">
+                            <h3>Direct Contacts</h3>
+                            <p><strong>Email:</strong> prajwalpatil062008@gmail.com</p>
+                            <p><strong>Phone:</strong> +91 7028147305</p>
+                            <p><strong>GitHub:</strong> github.com/prajwalpatil</p>
+                            <p><strong>LinkedIn:</strong> linkedin.com/in/prajwalpatil</p>
+                        </div>
+                        <div class="action-card">
+                            <h3>System Actions</h3>
+                            <button class="btn-primary" onclick="window.print()">Download Technical PDF Resume</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

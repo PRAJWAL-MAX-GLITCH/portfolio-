@@ -1,0 +1,312 @@
+.section {
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.35), transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.sectionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(212, 160, 23, 0.1);
+  border: 1px solid rgba(212, 160, 23, 0.25);
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #D4A017;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #D4A017, #10B981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #8892B0;
+  max-width: 560px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Skills panel */
+.skillsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 160, 23, 0.12);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #8892B0;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.tab:hover {
+  background: rgba(212, 160, 23, 0.08);
+  border-color: rgba(212, 160, 23, 0.3);
+  color: #F0F4FF;
+}
+
+.tabActive {
+  background: rgba(212, 160, 23, 0.1);
+  font-weight: 600;
+}
+
+.barsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  background: rgba(10, 15, 30, 0.7);
+  border: 1px solid rgba(212, 160, 23, 0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.skillRow {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.skillMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #C8D3F5;
+}
+
+.skillLevel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.barTrack {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.barFill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Tag panel */
+.tagPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tagTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #4A5568;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tagCloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 7px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 160, 23, 0.18);
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #8892B0;
+  cursor: default;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: rgba(212, 160, 23, 0.1);
+  border-color: rgba(212, 160, 23, 0.4);
+  color: #D4A017;
+  cursor: pointer;
+}
+
+/* LeetCode card */
+.leetcodeCard {
+  background: rgba(10, 15, 30, 0.85);
+  border: 1px solid rgba(255, 179, 71, 0.2);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.lcHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lcIcon {
+  font-size: 1.4rem;
+}
+
+.lcTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #F0F4FF;
+  flex: 1;
+}
+
+.lcBadge {
+  padding: 3px 12px;
+  background: rgba(255, 179, 71, 0.12);
+  border: 1px solid rgba(255, 179, 71, 0.3);
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #FFB347;
+}
+
+.lcStats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lcStat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.lcNum {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFB347;
+}
+
+.lcLbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: #4A5568;
+  text-align: center;
+}
+
+.lcDivider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.lcTopics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.lcTopic {
+  padding: 4px 12px;
+  background: rgba(255, 179, 71, 0.07);
+  border: 1px solid rgba(255, 179, 71, 0.15);
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #8892B0;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .tabs { gap: 6px; }
+  .tab { padding: 8px 14px; font-size: 0.8rem; }
+}

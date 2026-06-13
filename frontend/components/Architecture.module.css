@@ -1,0 +1,146 @@
+.section {
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.3), transparent);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.sectionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(212, 160, 23, 0.08);
+  border: 1px solid rgba(212, 160, 23, 0.22);
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #D4A017;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #F0F4FF, #C8D3F5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #8892B0;
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.diagramContainer {
+  background: rgba(10, 15, 30, 0.5);
+  border: 1px solid rgba(212, 160, 23, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  overflow-x: auto;
+}
+
+.diagramCanvas {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.connectionSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.connectionLine {
+  fill: none;
+  stroke: url(#lineGrad);
+  stroke-width: 2;
+  transition: all 0.3s ease;
+}
+
+.node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 120px;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 25, 45, 0.8);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 12px;
+  padding: 16px 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  cursor: default;
+  z-index: 2;
+}
+
+.nodeIcon {
+  font-size: 2rem;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nodeLabel {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #F0F4FF;
+  text-align: center;
+  line-height: 1.2;
+}
+
+@media (max-width: 850px) {
+  .diagramCanvas {
+    transform: scale(0.8);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 650px) {
+  .diagramCanvas {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 500px) {
+  .diagramCanvas {
+    transform: scale(0.45);
+  }
+}

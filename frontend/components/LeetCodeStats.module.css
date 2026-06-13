@@ -1,0 +1,219 @@
+.section {
+  padding: 80px 0;
+  background: transparent;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.sectionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(255, 161, 22, 0.1);
+  border: 1px solid rgba(255, 161, 22, 0.2);
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #ffa116;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #F0F4FF;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #8892B0;
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.statsCard {
+  background: rgba(10, 15, 30, 0.6);
+  border: 1px solid rgba(255, 161, 22, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+/* Main block: ring + achievements side by side */
+.mainBlock {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.solvedRing {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.ringContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.solvedCount {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffa116;
+  line-height: 1;
+}
+
+.solvedLabel {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  color: #8892B0;
+  font-weight: 600;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #ffa116, #ff7c00);
+  border-radius: 14px;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  margin-top: 8px;
+  width: fit-content;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 161, 22, 0.4);
+}
+
+
+.achievementBadge {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(20, 25, 45, 0.5);
+  border: 1px solid rgba(255, 161, 22, 0.1);
+  border-radius: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.achievementBadge:hover {
+  border-color: rgba(255, 161, 22, 0.3);
+}
+
+.badgeIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.badgeTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #F0F4FF;
+  margin-bottom: 3px;
+}
+
+.badgeSubtitle {
+  font-size: 0.8rem;
+  color: #8892B0;
+  line-height: 1.5;
+}
+
+/* Focus areas */
+.focusSection {
+  border-top: 1px solid rgba(255, 161, 22, 0.1);
+  padding-top: 30px;
+}
+
+.focusTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #4A5568;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.focusGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.focusChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid;
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.focusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .mainBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainInfo {
+    width: 100%;
+  }
+  .statsCard {
+    padding: 24px;
+  }
+}

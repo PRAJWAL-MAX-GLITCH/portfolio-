@@ -1,0 +1,48 @@
+{
+  "personal_info": {
+    "name": "Prajwal Patil",
+    "title": "AI/ML Engineer",
+    "contact": {
+      "phone": "+91 7028147305",
+      "email": "prajwalpatil062008@gmail.com",
+      "github": "https://github.com/PRAJWAL-MAX-GLITCH",
+      "linkedin": "https://www.linkedin.com/in/prajwal-patil-6a81a9383/",
+      "leetcode": "https://leetcode.com/u/prajwalpatil28/"
+    }
+  },
+  "technical_skills": {
+    "languages": ["Python", "C", "JavaScript", "R"],
+    "core_cs": ["DSA", "OOP", "DBMS", "SQL"],
+    "ai_ml": ["Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Scikit-Learn"],
+    "generative_ai": ["LangChain", "FAISS", "RAG", "Prompt Engineering", "Embeddings", "Vector Search"],
+    "backend": ["FastAPI", "REST APIs", "JSON"],
+    "tools_platforms": ["Git", "GitHub", "Docker", "VS Code", "Jupyter Notebook", "AWS", "Vercel"]
+  },
+  "projects": [
+    {
+      "name": "LinguiFAI – Multi-LLM Language Translation Platform",
+      "technologies": ["FastAPI", "OpenAI", "Gemini", "Groq", "DeepSeek", "Redis", "Celery", "Docker"],
+      "description": "Developed an advanced AI-powered language translation platform that dynamically routes requests across OpenAI, Gemini, Groq, and DeepSeek models to deliver accurate context-aware translations. Architected a FastAPI backend using Celery and Redis for asynchronous AI task execution and large-scale PDF/DOCX document processing. Optimized API latency and inference speed for real-time translation workflows while deploying the complete microservices infrastructure using Docker."
+    },
+    {
+      "name": "AI Smart Learning Platform",
+      "technologies": ["Python", "FastAPI", "TensorFlow", "PyTorch", "MongoDB"],
+      "description": "Developed an AI-powered learning platform providing personalized quizzes, course recommendations, and learning paths. Built ML/DL models for student analytics and recommendations. Designed scalable FastAPI services integrated with MongoDB and deployed the application on Vercel. Utilized AI-assisted development workflows for rapid prototyping and optimization."
+    },
+    {
+      "name": "MediSense AI – RAG Based Medical Assistant",
+      "technologies": ["LangChain", "Hugging Face", "FAISS", "FastAPI"],
+      "description": "Built a Retrieval-Augmented Generation healthcare assistant for intelligent medical information retrieval. Integrated LangChain, Hugging Face models, and FAISS vector search for semantic document retrieval. Developed FastAPI backend services for real-time query processing and context-aware response generation."
+    }
+  ],
+  "achievements": [
+    "Solved 300+ DSA problems on LeetCode.",
+    "Built and deployed AI, ML, and Generative AI applications.",
+    "Strong understanding of LLM pipelines, vector databases, and prompt engineering."
+  ],
+  "certifications": [
+    "Generative AI Certification",
+    "AWS Cloud Certification",
+    "AI Fundamentals Certification"
+  ]
+}

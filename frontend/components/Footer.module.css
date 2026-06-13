@@ -1,0 +1,112 @@
+.footer {
+  background: #040710;
+  border-top: 1px solid rgba(212, 160, 23, 0.12);
+  padding: 48px 0 32px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #D4A017, #10B981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #F0F4FF;
+}
+
+.logoAccent {
+  background: linear-gradient(135deg, #D4A017, #10B981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #8892B0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  color: #F0F4FF;
+  background: rgba(212, 160, 23, 0.08);
+}
+
+.copy {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #4A5568;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(212, 160, 23, 0.08);
+  margin-bottom: 24px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.madeWith {
+  font-size: 0.85rem;
+  color: #8892B0;
+}
+
+.name {
+  color: #D4A017;
+  font-weight: 600;
+}
+
+.stack {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #4A5568;
+}
+
+@media (max-width: 640px) {
+  .inner { flex-direction: column; align-items: flex-start; }
+  .bottom { flex-direction: column; align-items: flex-start; }
+}
