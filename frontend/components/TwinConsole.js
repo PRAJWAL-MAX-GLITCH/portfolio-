@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './TwinConsole.module.css';
+import { API_ENDPOINTS } from '../utils/api';
 
 const SUGGESTED_QUESTIONS = [
   'Tell me about Prajwal',
@@ -133,7 +134,7 @@ export default function TwinConsole() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:8000/api/v1/chat', {
+      const res = await fetch(API_ENDPOINTS.chat, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: trimmed }),
