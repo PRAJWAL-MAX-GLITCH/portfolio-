@@ -98,7 +98,7 @@ async def chat_endpoint(request: ChatRequest):
 
     try:
         model = genai.GenerativeModel(
-            model_name="gemini-pro",
+            model_name="gemini-2.5-flash",
             generation_config={"temperature": 0.4}
         )
         full_query = f"{system_prompt}\n\nUSER QUESTION:\n{query}"

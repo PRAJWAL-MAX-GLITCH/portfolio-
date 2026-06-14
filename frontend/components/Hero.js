@@ -114,63 +114,34 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right: Architecture Visual */}
+        {/* Right: Premium Portrait */}
         <motion.div
           className={styles.heroVisual}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           id="hero-visual-card"
         >
-          <div className={styles.aiCard}>
-            {/* Card header */}
-            <div className={styles.cardHeader}>
-              <div className={styles.cardDots}>
-                <span style={{ background: '#FF6B6B' }} />
-                <span style={{ background: '#FFB347' }} />
-                <span style={{ background: '#10B981' }} />
-              </div>
-              <span className={styles.cardTitle}>prajwal.ai_twin</span>
-              <span className={styles.cardLive}>
-                <span className={styles.liveDot} />
-                LIVE
-              </span>
+          {/* Scientific Background Atmosphere */}
+          <div className={styles.researchBg} />
+
+          {/* Floating Skills */}
+          <div className={`${styles.floatingSkill} ${styles.skill1}`}><span>⬡</span>Python</div>
+          <div className={`${styles.floatingSkill} ${styles.skill2}`}><span>⚡</span>FastAPI</div>
+          <div className={`${styles.floatingSkill} ${styles.skill3}`}><span>🧠</span>LangChain</div>
+          <div className={`${styles.floatingSkill} ${styles.skill4}`}><span>🔥</span>PyTorch</div>
+          <div className={`${styles.floatingSkill} ${styles.skill5}`}><span>🔗</span>RAG</div>
+
+          {/* Main Image Card */}
+          <div className={styles.portraitContainer}>
+            <div className={styles.imageWrapper}>
+              <img src="/images/prajwal.jpg" alt="Prajwal Patil" className={styles.profileImage} />
+              <div className={styles.imageOverlay} />
             </div>
-
-            {/* Card body */}
-            <div className={styles.cardBody}>
-              <div className={styles.statRow}>
-                <span className={styles.statLabel}>SYSTEM STATUS</span>
-                <span className={styles.statBadge}>Operational</span>
-              </div>
-              <div className={styles.metricGrid}>
-                {[
-                  { label: 'LeetCode', value: '300+', icon: '⚡' },
-                  { label: 'AI Projects', value: '3', icon: '🚀' },
-                  { label: 'RAG Systems', value: '1', icon: '🧠' },
-                  { label: 'Core Stack', value: 'Python', icon: '🐍' },
-                ].map((m) => (
-                  <div key={m.label} className={styles.metricItem}>
-                    <span className={styles.metricIcon}>{m.icon}</span>
-                    <span className={styles.metricValue}>{m.value}</span>
-                    <span className={styles.metricLabel}>{m.label}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className={styles.aiPrompt}>
-                <div className={styles.promptLine}>
-                  <span className={styles.promptSymbol}>›</span>
-                  <span className={styles.promptText}>Tell me about MediSense AI...</span>
-                </div>
-                <div className={styles.responseArea}>
-                  <span className={styles.avatarDot}>P</span>
-                  <span className={styles.responseText}>
-                    MediSense is a RAG-powered medical assistant using LangChain + FAISS 
-                    for semantic retrieval over clinical documents...
-                  </span>
-                </div>
-              </div>
+            
+            <div className={`${styles.floatingBadge} ${styles.posStatus}`}>
+              <span className={styles.dot} />
+              Open to AI/ML Opportunities
             </div>
           </div>
         </motion.div>
