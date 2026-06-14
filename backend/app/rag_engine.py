@@ -3,14 +3,14 @@ import json
 
 # Attempt to import RAG dependencies; fall back gracefully if not installed
 try:
-    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
     from langchain_community.embeddings import HuggingFaceEmbeddings
     from langchain_community.vectorstores import FAISS
-    from langchain.schema import Document
+    from langchain_core.documents import Document
     RAG_AVAILABLE = True
-except ImportError:
+except ImportError as e:
     RAG_AVAILABLE = False
-    print("WARNING: LangChain/FAISS not installed. RAG engine running in direct-context mode.")
+    print(f"WARNING: LangChain/FAISS not installed or failed to import ({e}). RAG engine running in direct-context mode.")
 
 INDEX_PATH = os.path.join(os.path.dirname(__file__), "faiss_index")
 
